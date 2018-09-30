@@ -1,0 +1,5 @@
+# Site settings
+title: Atlanta UX
+
+# Build settings
+markdown: kramdown

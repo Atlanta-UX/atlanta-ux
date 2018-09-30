@@ -1,0 +1,15 @@
+.stage{
+    flex: 1;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    height: 100%;
+    box-sizing: border-box;
+    section{
+        @extend .pad-m;
+        + section{
+            margin-top: 2.5rem;
+            padding-top: 2.5rem;
+            border-top: solid 1px $border-color;
+        }
+    }
+}

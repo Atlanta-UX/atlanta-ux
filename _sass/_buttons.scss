@@ -1,0 +1,33 @@
+.button{
+    background-color: white;
+    padding: 0.75em 2em;
+    display: inline-block;
+    color: $blue;
+    text-decoration: none;
+    border-radius: 3px;
+    border: solid 1px $border-color;
+    &:active{
+        background-color: darken(white,2);
+    }
+}
+.hero-button{
+    @extend .button;
+    color: $ink;
+    background-color: $yellow;
+    font-weight: 500;
+    border-color: transparent;
+    &:focus{
+        background-color: darken($yellow,5);
+    }
+    &:hover{
+        background-color: lighten($yellow,5);
+    }
+    &:active{
+        background-color: darken($yellow,5);
+    }
+}
+
+// Find a better way...
+p + .button{
+    margin-top: 1.5em;
+}

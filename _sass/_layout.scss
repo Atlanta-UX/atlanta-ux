@@ -1,0 +1,25 @@
+// Main
+html, body, #wrapper{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#wrapper{
+    display: flex;
+    overflow: hidden;
+    box-sizing: border-box;
+}  
+
+// Containers
+.pad-xxs{padding: 0.25rem;}
+.pad-xs{padding: 0.5rem;}
+.pad-s{padding: 1rem;}
+.pad-m{padding: 1.5rem;}
+.pad-l{padding: 2rem;}
+.pad-xl{padding: 2.5rem;}
+.pad-xxl{padding: 3rem;}
+
+.center-box{
+    max-width: 600px;
+    margin: 0 auto;
+}
