@@ -1,24 +1,20 @@
 <section id="designers">
     <article  class="center-box">
-        <h2>Designers</h2>
-        <p class="text-m">A directory of UX designers based in Atlanta. If you're missing from the list, <a href="#">request to be added</a>.</p>
+        <h2>Design teams</h2>
+        <p class="text-m">A directory of UX design teams based in Atlanta. If you're missing from the list, <a href="#">request to be added</a>.</p>
         <ul class="directory">
         {% for company in site.data.companies %}
             <li class="company">
-                <img src="/assets/images/directory/logo-{{company.name | remove: '&' | slugify: 'ascii' }}.png" alt="" class="avatar">
+                <!-- <img src="/assets/images/directory/logo-{{company.name | remove: '&' | slugify: 'ascii' }}.png" alt="" class="avatar"> -->
+                <img src="//logo.clearbit.com/{{company.website}}" alt="" class="avatar">
                 <div class="info">
                     <p class="company--name">{{ company.name }}</p>
                     <p class="company--address">{{ company.address }}</p>
                     <ul class="company--designers">
                         {% for designer in company.designers %}
-                        <li><a href="https://twitter.com/{{designer.twitter}}" title="{{designer.name}}" class="avatar" target="_blank"><img src="/assets/images/directory/avatar-{{designer.name | slugify }}.png" alt="{{designer.name}}" onerror="this.src='https://api.adorable.io/avatars/120/{{designer.name | slugify }}.png'"></a></li>
-                        <!-- <li>
-                            <a href="https://twitter.com/{{designer.twitter}}" title="{{designer.name}}" class="avatar" target="_blank">
-                                <object data="https://api.adorable.io/avatars/120/{{designer.name | slugify }}.png" type="image/png">
-                                    <img src="/assets/images/directory/avatar-{{designer.name | slugify }}.png" alt="{{designer.name}}">
-                                </object>
-                            </a>
-                        </li> -->
+                        <!-- <li><a href="https://twitter.com/{{designer.twitter}}" title="{{designer.name}}" class="avatar" target="_blank"><img src="/assets/images/directory/avatar-{{designer.name | slugify }}.png" alt="{{designer.name}}" onerror="this.src='https://api.adorable.io/avatars/120/{{designer.name | slugify }}.png'"></a></li> -->
+                        <li><a href="https://twitter.com/{{designer.twitter}}" title="{{designer.name}}" class="avatar" target="_blank"><img src="/assets/images/directory/avatar-{{designer.name | slugify }}.png" alt="{{designer.name}}" onerror="this.src='https://avatars.io/twitter/{{designer.twitter | remove: '@'}}'"></a></li>
+                        
                         {% endfor %}
                     </ul>
                 </div>

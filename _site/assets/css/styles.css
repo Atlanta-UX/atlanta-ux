@@ -154,7 +154,7 @@ p + .button, p + .hero-button {
         overflow: hidden; }
         .directory .company .info .company--designers .avatar:hover {
           border-color: #d5d5d5;
-          transform: scale(2); }
+          transform: scale(1.5); }
         .directory .company .info .company--designers .avatar img {
           height: 100%;
           width: 100%; }

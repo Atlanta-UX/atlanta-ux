@@ -34,7 +34,7 @@
                     overflow: hidden;
                     &:hover{
                         border-color: darken($border-color,10);
-                        transform: scale(2);
+                        transform: scale(1.5);
                     }
                     img{
                         height: 100%;
