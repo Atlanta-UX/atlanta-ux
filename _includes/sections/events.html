@@ -1,0 +1,22 @@
+<section id="events">
+    <article  class="center-box">
+        <h2>Events</h2>
+        <p class="text-m">UX events coming up in Atlanta. If you're hosting an event, <a href="#">add it to the list</a>.</p>
+        <ul class="event-list">
+        {% for date in site.data.events %}
+            <li class="date">
+                <h3 class="headline">{{date.date}}</h3>
+                <ul class="event--details">
+                    {% for event in date.events %}
+                    <li class="event">
+                        <p class="event--time">{{event.time}}</p>
+                        <p class="event--title">{{event.title}}<small>at <a href="#">{{event.location}}</a>, hosted by {{event.host}}</small></p>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+        </ul>
+    </article>
+</section>
+

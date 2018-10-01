@@ -2,4 +2,12 @@
     overflow-y: auto;
     width: 300px;
     border-right: solid 1px $border-color;
+    background-color: $blue;
+    color: white;
+    a{
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 0.5em;
+    }
 }

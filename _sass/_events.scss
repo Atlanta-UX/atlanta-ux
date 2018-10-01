@@ -1,0 +1,31 @@
+%list-reset{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.event-list{
+    @extend %list-reset;
+    .date{
+        margin-top: 2.5rem;
+    }
+    .event--details{
+        @extend %list-reset;
+        .event{
+            display: flex;
+            align-items: center;
+            margin-top: 1.5rem;
+            .event--time{
+                margin: 0 2rem 0 0;
+                
+            }
+            .event--title{
+                @extend .text-l;
+                margin: 0;
+                small{
+                    display: block;
+                    @extend .text-s;
+                }
+            }
+        }
+    }
+}

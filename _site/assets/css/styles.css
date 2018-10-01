@@ -47,24 +47,31 @@ html {
 .text-xl, h2 {
   font-size: 2rem; }
 
-.text-l, h3 {
+.text-l, h3, .event-list .event--details .event .event--title {
   font-size: 1.5rem;
   font-weight: 200; }
 
 .text-m, h4 {
   font-size: 1rem; }
 
-.text-s, h5, .directory .company .info .company--address {
+.text-s, h5, .directory .company .info .company--address, .event-list .event--details .event .event--title small {
   font-size: 0.75rem; }
 
 .text-xs, h6 {
   font-size: 0.5rem; }
+
+h1, h2, h3, h4, h5, p {
+  margin: 0 0 0.25em;
+  font-weight: 300; }
 
 h1 {
   text-rendering: optimizeLegibility; }
 
 h2 {
   text-rendering: optimizeLegibility; }
+
+h3 {
+  margin-top: 2em; }
 
 h4 {
   font-weight: 600; }
@@ -75,12 +82,13 @@ h5 {
 h6 {
   font-weight: 400; }
 
-h1, h2, h3, h4, h5, p {
-  margin: 0 0 0.25em;
-  font-weight: 300; }
-
 .text-center {
   text-align: center; }
+
+.headline {
+  border-bottom: solid 1px #eee;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em; }
 
 .stage {
   flex: 1;
@@ -96,7 +104,14 @@ h1, h2, h3, h4, h5, p {
 .sidebar {
   overflow-y: auto;
   width: 300px;
-  border-right: solid 1px #eee; }
+  border-right: solid 1px #eee;
+  background-color: #337CA0;
+  color: white; }
+  .sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0.5em; }
 
 .button, .hero-button {
   background-color: white;
@@ -162,3 +177,21 @@ p + .button, p + .hero-button {
       margin-top: 2.5rem;
       padding-top: 2.5rem;
       border-top: solid 1px #eee; }
+
+.event-list, .event-list .event--details {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.event-list .date {
+  margin-top: 2.5rem; }
+.event-list .event--details .event {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem; }
+  .event-list .event--details .event .event--time {
+    margin: 0 2rem 0 0; }
+  .event-list .event--details .event .event--title {
+    margin: 0; }
+    .event-list .event--details .event .event--title small {
+      display: block; }

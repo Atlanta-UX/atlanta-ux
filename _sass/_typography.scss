@@ -12,17 +12,26 @@ html{
 .text-s{font-size: 0.75rem}
 .text-xs{font-size: 0.5rem}
 
-h1{@extend .text-xxl;text-rendering: optimizeLegibility;}
-h2{@extend .text-xl;text-rendering: optimizeLegibility;}
-h3{@extend .text-l;}
-h4{@extend .text-m; font-weight: 600;}
-h5{@extend .text-s;font-weight: 400;}
-h6{@extend .text-xs;font-weight: 400;}
-
 h1,h2,h3,h4,h5,p{
     margin: 0 0 0.25em;
     font-weight: 300;
 }
 
+h1{@extend .text-xxl;text-rendering: optimizeLegibility;}
+h2{@extend .text-xl;text-rendering: optimizeLegibility;}
+h3{@extend .text-l; margin-top: 2em;}
+h4{@extend .text-m; font-weight: 600;}
+h5{@extend .text-s;font-weight: 400;}
+h6{@extend .text-xs;font-weight: 400;}
+
+
+
 // Alignment
 .text-center{text-align: center;}
+
+// Styles
+.headline{
+    border-bottom: solid 1px $border-color;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+}

@@ -1,0 +1,37 @@
+[
+	{
+        "date": "3 October",
+        "events":[
+            {
+            "time": "6:30PM",
+            "title": "Writing User Stories for Accessibility", 
+            "host": "The Home Depot",
+            "location": "Ponce City Market"
+            },
+            {
+            "time": "7:30PM",
+            "title": "Some other event I made up", 
+            "host": "The Home Depot",
+            "location": "Ponce City Market"
+            }
+        ]
+    },
+    {
+        "date": "5 October",
+        "events":[
+            {
+            "time": "6:30PM",
+            "title": "Writing User Stories for Accessibility", 
+            "host": "The Home Depot",
+            "location": "Ponce City Market"
+            },
+            {
+            "time": "7:30PM",
+            "title": "Some other event I made up", 
+            "host": "The Home Depot",
+            "location": "Ponce City Market"
+            }
+        ]
+    }
+	
+]
