@@ -12,12 +12,12 @@ html{
 .text-s{font-size: 0.75rem}
 .text-xs{font-size: 0.5rem}
 
-h1{@extend .text-xxl;}
-h2{@extend .text-xl;}
+h1{@extend .text-xxl;text-rendering: optimizeLegibility;}
+h2{@extend .text-xl;text-rendering: optimizeLegibility;}
 h3{@extend .text-l;}
 h4{@extend .text-m; font-weight: 600;}
-h5{@extend .text-s;}
-h6{@extend .text-xs;}
+h5{@extend .text-s;font-weight: 400;}
+h6{@extend .text-xs;font-weight: 400;}
 
 h1,h2,h3,h4,h5,p{
     margin: 0 0 0.25em;

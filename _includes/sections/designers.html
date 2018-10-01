@@ -3,38 +3,28 @@
         <h2>Designers</h2>
         <p class="text-m">A directory of UX designers based in Atlanta. If you're missing from the list, <a href="#">request to be added</a>.</p>
         <ul class="directory">
+        {% for company in site.data.companies %}
             <li class="company">
-                <img src="/assets/images/directory/logo-att.png" alt="" class="avatar">
+                <img src="/assets/images/directory/logo-{{company.name | remove: '&' | slugify: 'ascii' }}.png" alt="" class="avatar">
                 <div class="info">
-                    <p class="company--name">AT&amp;T</p>
-                    <p class="company--address">1021 Hello World Ln. Atlanta, GA 30062</p>
+                    <p class="company--name">{{ company.name }}</p>
+                    <p class="company--address">{{ company.address }}</p>
                     <ul class="company--designers">
-                        <li><img src="/assets/images/directory/avatar-aaron-benjamin.png" alt="" class="avatar" title="Aaron Benjamin" alt="Aaron Benjamin"></li>
-                        <li><img src="/assets/images/directory/avatar-aaron-benjamin.png" alt="" class="avatar" title="Aaron Benjamin" alt="Aaron Benjamin"></li>
-                        <li><img src="/assets/images/directory/avatar-aaron-benjamin.png" alt="" class="avatar" title="Aaron Benjamin" alt="Aaron Benjamin"></li>
-                        <li><img src="/assets/images/directory/avatar-aaron-benjamin.png" alt="" class="avatar" title="Aaron Benjamin" alt="Aaron Benjamin"></li>
-                        <li><img src="/assets/images/directory/avatar-aaron-benjamin.png" alt="" class="avatar" title="Aaron Benjamin" alt="Aaron Benjamin"></li>
-                        <li><img src="/assets/images/directory/avatar-aaron-benjamin.png" alt="" class="avatar" title="Aaron Benjamin" alt="Aaron Benjamin"></li>
-                        <li><img src="/assets/images/directory/avatar-aaron-benjamin.png" alt="" class="avatar" title="Aaron Benjamin" alt="Aaron Benjamin"></li>
+                        {% for designer in company.designers %}
+                        <li><a href="https://twitter.com/{{designer.twitter}}" title="{{designer.name}}" class="avatar" target="_blank"><img src="/assets/images/directory/avatar-{{designer.name | slugify }}.png" alt="{{designer.name}}" onerror="this.src='https://api.adorable.io/avatars/120/{{designer.name | slugify }}.png'"></a></li>
+                        <!-- <li>
+                            <a href="https://twitter.com/{{designer.twitter}}" title="{{designer.name}}" class="avatar" target="_blank">
+                                <object data="https://api.adorable.io/avatars/120/{{designer.name | slugify }}.png" type="image/png">
+                                    <img src="/assets/images/directory/avatar-{{designer.name | slugify }}.png" alt="{{designer.name}}">
+                                </object>
+                            </a>
+                        </li> -->
+                        {% endfor %}
                     </ul>
                 </div>
             </li>
-            <li class="company">
-                <img src="/assets/images/directory/logo-att.png" alt="" class="avatar">
-                <div class="info">
-                    <p class="company--name">AT&amp;T</p>
-                    <p class="company--address">1021 Hello World Ln. Atlanta, GA 30062</p>
-                    <ul class="company--designers">
-                        <li><img src="/assets/images/directory/avatar-aaron-benjamin.png" alt="" class="avatar" title="Aaron Benjamin" alt="Aaron Benjamin"></li>
-                        <li><img src="/assets/images/directory/avatar-aaron-benjamin.png" alt="" class="avatar" title="Aaron Benjamin" alt="Aaron Benjamin"></li>
-                        <li><img src="/assets/images/directory/avatar-aaron-benjamin.png" alt="" class="avatar" title="Aaron Benjamin" alt="Aaron Benjamin"></li>
-                        <li><img src="/assets/images/directory/avatar-aaron-benjamin.png" alt="" class="avatar" title="Aaron Benjamin" alt="Aaron Benjamin"></li>
-                        <li><img src="/assets/images/directory/avatar-aaron-benjamin.png" alt="" class="avatar" title="Aaron Benjamin" alt="Aaron Benjamin"></li>
-                        <li><img src="/assets/images/directory/avatar-aaron-benjamin.png" alt="" class="avatar" title="Aaron Benjamin" alt="Aaron Benjamin"></li>
-                        <li><img src="/assets/images/directory/avatar-aaron-benjamin.png" alt="" class="avatar" title="Aaron Benjamin" alt="Aaron Benjamin"></li>
-                    </ul>
-                </div>
-            </li>
+        {% endfor %}
         </ul>
     </article>
 </section>
+

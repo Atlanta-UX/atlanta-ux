@@ -1,0 +1,30 @@
+[
+	{
+		"name": "The Home Depot", 
+		"address": "123 Hello Ln. Atlanta, GA 30062",
+		"designers": [
+			{
+				"name": "Aaron Benjamin",
+				"twitter": "@abenjamin765"
+			},
+			{
+				"name": "Jenny Keller",
+				"twitter": "@abenjamin765"
+			},
+			{
+				"name": "Leah Sail",
+				"twitter": "@abenjamin765"
+			}
+		]
+    },
+    {
+		"name": "AT&T",
+		"address": "123 Hello Ln. Atlanta, GA 30062",
+		"designers": [
+			{
+				"name": "John Smith",
+				"twitter": "@jSmith123"
+			}
+		]
+	}
+]
